@@ -9,7 +9,8 @@
   
     conda create -n pytorch-openpose python=3.7
 
-### 3.進入虛擬環境:[詳細Anaconda虛擬環境操作說明](https://medium.com/python4u/%E7%94%A8conda%E5%BB%BA%E7%AB%8B%E5%8F%8A%E7%AE%A1%E7%90%86python%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83-b61fd2a76566)
+### 3.進入虛擬環境
+執行程式可切換虛擬環境，防止造成很雜亂的環境，而影響其他程式執行[詳細Anaconda虛擬環境操作說明](https://medium.com/python4u/%E7%94%A8conda%E5%BB%BA%E7%AB%8B%E5%8F%8A%E7%AE%A1%E7%90%86python%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83-b61fd2a76566)
   
     conda activate pytorch-openpose
 
@@ -45,7 +46,7 @@ or:
     
 如果無法安裝請google查詢問題(大部分狀況是套件名稱錯誤或conda、pip需要更新或版本支援問題)
 ### 7.執行openpose(即時)
-請確認在pytorch-openpose路徑底下執行，並準備相機:
+請確認在pytorch-openpose路徑底下執行，並準備攝像頭:
 
     python demo_camera.py
 

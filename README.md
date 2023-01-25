@@ -32,9 +32,13 @@
 
     conda list
     pip list
+    
 如果執行程式時發現無法執行(程式找不到套件)，手動安裝程式:
+
     conda install 套件名稱
+    
 or
     pip install 套件名稱
+    
 如果無法安裝請google查詢問題(大部分狀況是套件名稱錯誤或conda、pip需要更新、版本支援問題)
 

@@ -47,12 +47,14 @@ or:
     pip install 套件名稱
     
 如果無法安裝請google查詢問題(大部分狀況是套件名稱錯誤或conda、pip需要更新或版本支援問題)
-### 7.執行openpose(即時)
+### 7.將openpose訓練資料放入modle資料夾
+[下載資料](https://drive.google.com/drive/folders/1JsvI4M4ZTg98fmnCZLFM-3TeovnCRElG)
+### 8.執行openpose(即時)
 請確認在pytorch-openpose路徑和環境底下執行，並準備攝像頭:
 
     python demo_camera.py
 
-### 8.執行openpose(圖片)
+### 9.執行openpose(圖片)
 準備圖片放入images資料夾中
 修改demo.py的程式，改成要跑的圖片名稱(請注意檔名"demo"和副檔名*.jpg):
 
@@ -62,6 +64,6 @@ or:
 
     python demo.py
 
-### 9.執行openpose(影片)
+### 10.執行openpose(影片)
 準備影片放入video資料夾中
 

@@ -178,3 +178,4 @@ or:
 ### lstm的accuracy:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/lstm/lstm_accuracy.jpg)  
 
+可以觀察到兩者訓練結果的穩定度、accuracy、loss差不多，但因為ann的learn rate設定較高會導致overfitting，所以降低ann的learn rate並增加epochs，導致ann的epochs設定到500才收斂完成，lstm的epochs只需要設定50，所以以訓練效率來說lstm較為優良

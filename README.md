@@ -76,9 +76,9 @@ or:
     python demo_video.py video/output.mp4
 
 ## ann訓練執行說明:
-請在ann路徑底下執行
 ### 1.收集資料
-將辨識的姿勢錄製成一段影片，並將影片放入video資料夾中
+請在ann路徑底下執行
+將辨識的姿勢錄製成一段影片，並將影片放入ann/video資料夾中
 
     ffmpeg -i video/輸入影片名稱.mp4 -vf scale=800:400 video/output.mp4
 
@@ -88,6 +88,7 @@ or:
 
 **注意收集資料的路徑和檔案名稱，要從demo_video_data.py修改程式碼**
 ### 2.訓練ann
+請在ann路徑底下執行
 執行:
 
     pyton ann.py
@@ -98,7 +99,7 @@ or:
     python ann_predict_camera.py
 
 ### 4.辨識姿勢(圖片)
-準備圖片放入images資料夾中
+準備圖片放入ann/images資料夾中
 修改ann_predict.py的程式，改成要跑的圖片名稱(請注意檔名"demo"和副檔名*.jpg):
 
     test_image = 'images/demo.jpg'
@@ -108,3 +109,54 @@ or:
     python ann_predict.py
 
 ### 5.辨識姿勢(影片)
+準備影片放入ann/video資料夾中
+請確認在ann路徑和pytorch-openpose環境底下執行:
+
+    ffmpeg -i video/輸入影片名稱.mp4 -vf scale=800:400 video/output.mp4
+
+執行程式:
+
+    python ann_predict_video.py video/output.mp4
+
+## lstm訓練執行說明:
+### 1.收集資料
+請在lstm路徑底下執行
+將辨識的姿勢錄製成一段影片，並將影片放入lstm/video資料夾中
+
+    ffmpeg -i video/輸入影片名稱.mp4 -vf scale=800:400 video/output.mp4
+
+執行程式:
+
+    python demo_video_data.py video/output.mp4
+
+**注意收集資料的路徑和檔案名稱，要從demo_video_data.py修改程式碼**
+### 2.訓練lstm
+請在lstm路徑底下執行
+執行:
+
+    pyton lstm.py
+
+### 3.辨識姿勢(即時)
+請確認在lstm路徑和pytorch-openpose環境底下執行，並準備攝像頭:
+
+    python lstm_predict_camera.py
+
+### 4.辨識姿勢(圖片)
+準備圖片放入lstm/images資料夾中
+修改ann_predict.py的程式，改成要跑的圖片名稱(請注意檔名"demo"和副檔名*.jpg):
+
+    test_image = 'images/demo.jpg'
+
+請確認在lstm路徑和pytorch-openpose環境底下執行:
+
+    python lstm_predict.py
+
+### 5.辨識姿勢(影片)
+準備影片放入lstm/video資料夾中
+請確認在lstm路徑和pytorch-openpose環境底下執行:
+
+    ffmpeg -i video/輸入影片名稱.mp4 -vf scale=800:400 video/output.mp4
+
+執行程式:
+
+    python lstm_predict_video.py video/output.mp4

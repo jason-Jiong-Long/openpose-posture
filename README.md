@@ -2,7 +2,7 @@
 ## 感謝[Hzzone](https://github.com/Hzzone)貢獻pytorch-openpose程式和安裝說明
 ### 目的是運用深度學習完成姿勢辨識，採集人體關節運用[openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
 
-## 說明:
+## pytorch-openpose安裝執行說明:
 ### 1.下載[pytorch-openpose程式](https://github.com/Hzzone/pytorch-openpose)，並放入電腦路徑下
 ### 2.利用[Anaconda](https://www.anaconda.com/products/distribution)建立虛擬環境
 開啟Anaconda Prompt:
@@ -48,7 +48,7 @@ or:
     
 如果無法安裝請google查詢問題(大部分狀況是套件名稱錯誤或conda、pip需要更新或版本支援問題)
 ### 7.將openpose訓練資料放入modle資料夾
-[下載資料](https://drive.google.com/drive/folders/1JsvI4M4ZTg98fmnCZLFM-3TeovnCRElG)
+[下載openpose訓練資料](https://drive.google.com/drive/folders/1JsvI4M4ZTg98fmnCZLFM-3TeovnCRElG)
 ### 8.執行openpose(即時)
 請確認在pytorch-openpose路徑和環境底下執行，並準備攝像頭:
 
@@ -66,4 +66,12 @@ or:
 
 ### 10.執行openpose(影片)
 準備影片放入video資料夾中
+請確認在pytorch-openpose路徑和環境底下執行:
 
+    ffmpeg -i video/輸入影片名稱.mp4 -vf scale=800:400 video/output.mp4
+
+執行程式:
+
+    python demo_video.py video/output.mp4
+
+## ann訓練執行說明:

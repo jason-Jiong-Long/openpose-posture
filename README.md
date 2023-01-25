@@ -170,8 +170,8 @@ ann的loss:
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/ann/ann_loss.png)
 ann的accuracy:
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/ann/ann_acc.png)
-
-lstm的loss:
+---
+lstm的loss:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/lstm/lstm_loss.jpg)
-lstm的accuracy:
+lstm的accuracy:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/lstm/lstm_accuracy.jpg)

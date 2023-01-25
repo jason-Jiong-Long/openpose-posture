@@ -1,7 +1,9 @@
 # openpose-posture
-### 目的是運用深度學習完成姿勢辨識，採集人體關節運用openpose[程式](https://github.com/Hzzone/pytorch-openpose)
+##感謝[Hzzone](https://github.com/Hzzone)提供程式和說明
+### 目的是運用深度學習完成姿勢辨識，採集人體關節運用[openpose程式](https://github.com/Hzzone/pytorch-openpose)
+
 ## 說明:
-###     1.下載pytorch-openpose程式[網址](https://github.com/Hzzone/pytorch-openpose)，並放入電腦路徑下
+###     1.下載[pytorch-openpose程式](https://github.com/Hzzone/pytorch-openpose)，並放入電腦路徑下
 ###     2.利用[Anaconda](https://www.anaconda.com/products/distribution)建立虛擬環境:
   
     conda create -n pytorch-openpose python=3.7

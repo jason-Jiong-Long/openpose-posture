@@ -38,6 +38,7 @@
     conda install 套件名稱
     
 or
+
     pip install 套件名稱
     
 如果無法安裝請google查詢問題(大部分狀況是套件名稱錯誤或conda、pip需要更新、版本支援問題)

@@ -12,7 +12,7 @@
   
     conda activate pytorch-openpose
 
-### 4.安裝python套件:(我是一個一個手動安裝，不會的可以執行以下指令"切記執行前要切換到requirements.txt的目錄底下")
+### 4.安裝python套件:(我是手動安裝，不會手動安裝的可以執行以下指令"切記執行前要切換到requirements.txt的目錄底下")
  
     pip install -r requirements.txt
 
@@ -26,4 +26,15 @@
 接著執行:
 
     conda install ffmpeg
+
+### 6.檢查安裝套件:
+查看安裝套件是否成功在虛擬環境中
+
+    conda list
+    pip list
+如果執行程式時發現無法執行(程式找不到套件)，手動安裝程式:
+    conda install 套件名稱
+or
+    pip install 套件名稱
+如果無法安裝請google查詢問題(大部分狀況是套件名稱錯誤或conda、pip需要更新、版本支援問題)
 

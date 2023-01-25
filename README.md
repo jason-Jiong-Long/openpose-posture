@@ -164,3 +164,5 @@ or:
 執行程式:
 
     python lstm_predict_video.py video/output.mp4
+
+![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/ann/ann_acc.png)

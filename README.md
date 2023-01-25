@@ -1,6 +1,7 @@
 # openpose-posture
 ## 感謝[Hzzone](https://github.com/Hzzone)貢獻pytorch-openpose程式和安裝說明
 ### 目的是運用深度學習完成姿勢辨識，採集人體關節運用[openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)
+Openpose辨識人體骨骼關節，獲得關節座標，並且將公車乘客分別正常等公車、正常舉手搭公車、輪椅等公車、輪椅舉手搭公車，將一個人18個關節座標收集與分類成四種資料集，藉由資料建立LSTM訓練模型，並將LSTM的layers設定為10，在最後的結果做神經元運算，完成姿勢模型訓練和辨識
 
 ## pytorch-openpose安裝執行說明:
 ### 1.下載[pytorch-openpose程式](https://github.com/Hzzone/pytorch-openpose)，並放入電腦路徑下

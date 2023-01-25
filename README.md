@@ -4,7 +4,8 @@
 
 ## 說明:
 ### 1.下載[pytorch-openpose程式](https://github.com/Hzzone/pytorch-openpose)，並放入電腦路徑下
-### 2.利用[Anaconda](https://www.anaconda.com/products/distribution)建立虛擬環境:
+### 2.利用[Anaconda](https://www.anaconda.com/products/distribution)建立虛擬環境
+開啟Anaconda Prompt:
   
     conda create -n pytorch-openpose python=3.7
 
@@ -12,7 +13,8 @@
   
     conda activate pytorch-openpose
 
-### 4.安裝python套件:(我是手動安裝，不會手動安裝的可以執行以下指令"切記執行前要切換到requirements.txt的目錄底下")
+### 4.安裝python套件
+我是手動安裝，不會手動安裝的可以執行以下指令"切記執行前要切換到requirements.txt的目錄底下"，如果不會切換目錄請自行google學習:
  
     pip install -r requirements.txt
 
@@ -28,7 +30,7 @@
     conda install ffmpeg
 
 ### 6.檢查安裝套件:
-查看安裝套件是否成功在虛擬環境中
+查看安裝套件是否成功在虛擬環境中:
 
     conda list
     pip list
@@ -37,12 +39,22 @@
 
     conda install 套件名稱
     
-or
+or:
 
     pip install 套件名稱
     
 如果無法安裝請google查詢問題(大部分狀況是套件名稱錯誤或conda、pip需要更新或版本支援問題)
-### 7.執行openpose
-即時偵測(請確認在pytorch-openpose路徑底下執行，並準備相機)
+### 7.執行openpose(即時)
+請確認在pytorch-openpose路徑底下執行，並準備相機:
 
     python demo_camera.py
+
+### 7.執行openpose(圖片)
+準備圖片放入images資料夾中
+修改demo.py的程式，改成要跑的圖片名稱(請注意檔名和副檔名):
+
+    test_image = 'images/demo.jpg'
+
+請確認在pytorch-openpose路徑底下執行:
+
+    python demo.py

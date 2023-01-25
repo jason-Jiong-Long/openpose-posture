@@ -41,5 +41,8 @@ or
 
     pip install 套件名稱
     
-如果無法安裝請google查詢問題(大部分狀況是套件名稱錯誤或conda、pip需要更新、版本支援問題)
+如果無法安裝請google查詢問題(大部分狀況是套件名稱錯誤或conda、pip需要更新或版本支援問題)
+### 7.執行openpose
+即時偵測(請確認在pytorch-openpose路徑底下執行，並準備相機)
 
+    python demo_camera.py

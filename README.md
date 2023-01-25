@@ -19,11 +19,12 @@
 ### 5.安裝ffmpeg:
      需下載[github上的ffmpeg](https://github.com/kkroening/ffmpeg-python/tree/master/examples)
      在ffmpeg-python資料夾路徑底下執行:
-      
+     ```  
     python setup.py build
     python setup.py install
 
+     ```
      接著執行:
-      
+     ```
     conda install ffmpeg
 

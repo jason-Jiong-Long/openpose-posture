@@ -93,7 +93,7 @@ or:
 請在ann路徑底下執行
 執行:
 
-    pyton ann.py
+    python ann.py
 
 ### 4.辨識姿勢(即時)
 請確認在ann路徑和pytorch-openpose環境底下執行，並準備攝像頭:
@@ -138,7 +138,7 @@ or:
 請在lstm路徑底下執行
 執行:
 
-    pyton lstm.py
+    python lstm.py
 
 ### 4.辨識姿勢(即時)
 請確認在lstm路徑和pytorch-openpose環境底下執行，並準備攝像頭:

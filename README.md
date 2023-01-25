@@ -76,3 +76,14 @@ or:
     python demo_video.py video/output.mp4
 
 ## ann訓練執行說明:
+請在ann路徑底下執行
+### 1.收集資料
+將辨識的姿勢錄製成一段影片，並將影片放入video資料夾中
+
+    ffmpeg -i video/輸入影片名稱.mp4 -vf scale=800:400 video/output.mp4
+
+執行程式:
+
+    python demo_video_data.py video/output.mp4
+
+**注意**

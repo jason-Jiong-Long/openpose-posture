@@ -86,4 +86,25 @@ or:
 
     python demo_video_data.py video/output.mp4
 
-**注意**
+**注意收集資料的路徑和檔案名稱，要從demo_video_data.py修改程式碼**
+### 2.訓練ann
+執行:
+
+    pyton ann.py
+
+### 3.辨識姿勢(即時)
+請確認在ann路徑和pytorch-openpose環境底下執行，並準備攝像頭:
+
+    python ann_predict_camera.py
+
+### 4.辨識姿勢(圖片)
+準備圖片放入images資料夾中
+修改ann_predict.py的程式，改成要跑的圖片名稱(請注意檔名"demo"和副檔名*.jpg):
+
+    test_image = 'images/demo.jpg'
+
+請確認在ann路徑和pytorch-openpose環境底下執行:
+
+    python ann_predict.py
+
+### 5.辨識姿勢(影片)

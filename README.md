@@ -10,8 +10,9 @@
     conda create -n pytorch-openpose python=3.7
 
 ### 3.進入虛擬環境
-執行程式可切換虛擬環境，防止造成很雜亂的環境，而影響其他程式執行:
 [詳細Anaconda虛擬環境操作說明](https://medium.com/python4u/%E7%94%A8conda%E5%BB%BA%E7%AB%8B%E5%8F%8A%E7%AE%A1%E7%90%86python%E8%99%9B%E6%93%AC%E7%92%B0%E5%A2%83-b61fd2a76566)
+執行程式可切換虛擬環境，防止造成很雜亂的環境，而影響其他程式執行:
+
   
     conda activate pytorch-openpose
 

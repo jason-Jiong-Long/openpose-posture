@@ -167,9 +167,9 @@ or:
 
 ## LSTM與ANN觀察差異:
 ### ann的loss:
-![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/ann/ann_loss.png)
+![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/ann/ann_loss.jpg)
 ### ann的accuracy:
-![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/ann/ann_acc.png)
+![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/ann/ann_accuracy.jpg)
 
 ---
 

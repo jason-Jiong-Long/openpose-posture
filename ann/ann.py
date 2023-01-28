@@ -13,7 +13,7 @@ import os
 import sys
 import cv2
 sys.path.append('..')
-
+import datetime
 # Create CNN Model
 class ANN_Model(nn.Module):
     def __init__(self):
@@ -121,7 +121,7 @@ if __name__ == "__main__":
     import sys
     import cv2
     sys.path.append('..')
-
+    start = datetime.datetime.now()
     pic_size = 36
     image_path = './dataset_ann/'
 
@@ -184,7 +184,7 @@ if __name__ == "__main__":
     # Hyper Parameters
     # batch_size, epoch and iteration
     LR = 0.00001
-    batch_size = 32
+    batch_size = 4
     n_iters = 10000
     num_epochs = n_iters / (len(features_train) / batch_size)
     num_epochs = int(num_epochs)
@@ -204,7 +204,16 @@ if __name__ == "__main__":
     input_shape = (-1,36)
 
     training_loss, training_accuracy, validation_loss, validation_accuracy = fit_model(ANN_model, loss_func, ANN_optimizer, input_shape, num_epochs, train_loader, test_loader)
-
+    end = datetime.datetime.now()
+    print("time:",end - start)
+    print("max_training_loss:",max(training_loss))
+    print("max_training_accuracy:",max(training_accuracy))
+    print("max_validation_los:",max(validation_loss))
+    print("max_tvalidation_accuracy:",max(validation_accuracy))
+    print("min_training_loss:",min(training_loss))
+    print("min_training_accuracy:",min(training_accuracy))
+    print("min_validation_loss:",min(validation_loss))
+    print("min_validation_accuracy:",min(validation_accuracy))
 
     # visualization
     plt.plot(range(num_epochs), training_loss, label='Training_loss', color="blue")
@@ -213,11 +222,14 @@ if __name__ == "__main__":
     plt.xlabel('Number of epochs')
     plt.ylabel('Loss')
     plt.legend()
-    plt.show()
+    plt.savefig('./ann_loss.jpg')
+    plt.close()
+
     plt.plot(range(num_epochs), training_accuracy, label='Training_accuracy', color="blue")
     plt.plot(range(num_epochs), validation_accuracy, label='Validation_accuracy', color="red")
     plt.title('Training & Validation accuracy')
     plt.xlabel('Number of epochs')
     plt.ylabel('Accuracy')
     plt.legend()
-    plt.show()
+    plt.savefig('./ann_accuracy.jpg')
+    plt.close()

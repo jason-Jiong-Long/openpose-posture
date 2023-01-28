@@ -15,13 +15,14 @@ import random
 import os
 import sys
 sys.path.append('..')
+import datetime
 
 # Create LSTM Model
 class LSTM_Model(nn.Module):
     def __init__(self):
         super(LSTM_Model, self).__init__()
         self.num_classes = 5 #number of classes
-        self.num_layers = 10 #number of layers
+        self.num_layers = 4 #number of layers
         self.input_size = 36 #input size
         self.hidden_size = 100 #hidden state
         self.seq_length = 1 #sequence length
@@ -156,6 +157,7 @@ def predict(model, device, data):
         pred = pred.cpu()
         return pred
 if __name__ == "__main__":
+    start = datetime.datetime.now()
 
     pic_size = 36
     image_path = './dataset_lstm/'
@@ -200,7 +202,7 @@ if __name__ == "__main__":
     # Pytorch train and test TensorDataset
     # Hyper Parameters
     # batch_size, epoch and iteration
-    batch_size = 10
+    batch_size = 4
     num_epochs = 50
 
     # reshape成丟進model input的dimension
@@ -248,11 +250,20 @@ if __name__ == "__main__":
     print(LSTM_model)
     LSTM_optimizer = torch.optim.Adam(LSTM_model.parameters(), lr=LR)   # optimize all cnn parameters
 
-    input_shape = (-1,10,36)
+    input_shape = (-1,4,36)
 
 
     training_loss, training_accuracy, validation_loss, validation_accuracy = fit_model(LSTM_model, loss_func, LSTM_optimizer, num_epochs, train_loader, test_loader, input_shape)
-
+    end = datetime.datetime.now()
+    print("time:",end - start)
+    print("max_training_loss:",max(training_loss))
+    print("max_training_accuracy:",max(training_accuracy))
+    print("max_validation_los:",max(validation_loss))
+    print("max_tvalidation_accuracy:",max(validation_accuracy))
+    print("min_training_loss:",min(training_loss))
+    print("min_training_accuracy:",min(training_accuracy))
+    print("min_validation_loss:",min(validation_loss))
+    print("min_validation_accuracy:",min(validation_accuracy))
     # visualization
     plt.plot(range(num_epochs), training_loss, label='Training_loss', color="blue")
     plt.plot(range(num_epochs), validation_loss, label='validation_loss', color="red")

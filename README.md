@@ -180,7 +180,7 @@ epochs = 500
 loss function = Cross Entropy   
 優化器 = Adam    
 ### lstm(數據1)
-classes = 5, layers = 1, input_size = 36, hidden_size = 100 
+classes = 5, layers = 1, input_size = 36, hidden_size = 100   
 learn rate = 0.001   
 batch size = 4   
 epochs = 50   

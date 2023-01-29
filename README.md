@@ -223,4 +223,9 @@ loss function = Cross Entropy
 #### lstm的accuracy:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/lstm/lstm_accuracy.jpg)  
 
+|  | ann(數據1) | ann(數據2) | lstm(數據1) | lstm(數據2) |
+| :-----: | :----: | :----: | :----: | :----: |
+| 時間 | 02:37 | 22:55 | 06:13 | 10:58 |
+| max_training_loss | 1.5176 | 4.9203 | 0.8826 | 1.1118 |
+
 可以觀察到兩者訓練結果的穩定度、accuracy、loss差不多，但因為ann的learn rate設定較高會導致overfitting，所以降低ann的learn rate並增加epochs，導致ann的epochs設定到500才收斂完成，lstm的epochs只需要設定50，所以以訓練效率來說lstm較為優良

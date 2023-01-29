@@ -166,33 +166,33 @@ or:
     python lstm_predict_video.py video/output.mp4
 ## 模型參數:
 ### ann(數據1)
-輸入層 = 36, 隱藏層1 = 18, 隱藏層2 = 9, 輸出層 = 5
-learn rate = 0.001
-batch size = 4
-epochs = 50
-loss function = Cross Entropy
-優化器 = Adam
+輸入層 = 36, 隱藏層1 = 18, 隱藏層2 = 9, 輸出層 = 5  
+learn rate = 0.001  
+batch size = 4  
+epochs = 50 
+loss function = Cross Entropy 
+優化器 = Adam  
 ### ann(數據2)
-輸入層 = 36, 隱藏層1 = 18, 隱藏層2 = 9, 輸出層 = 5
-learn rate = 0.00001
-batch size = 4
-epochs = 500
-loss function = Cross Entropy
-優化器 = Adam
+輸入層 = 36, 隱藏層1 = 18, 隱藏層2 = 9, 輸出層 = 5  
+learn rate = 0.00001  
+batch size = 4  
+epochs = 500  
+loss function = Cross Entropy 
+優化器 = Adam  
 ### lstm(數據1)
-classes = 5, layers = 1, input_size = 36, hidden_size = 100
-learn rate = 0.001
-batch size = 4
-epochs = 50
-loss function = Cross Entropy
-優化器 = Adam
+classes = 5, layers = 1, input_size = 36, hidden_size = 100 
+learn rate = 0.001  
+batch size = 4  
+epochs = 50 
+loss function = Cross Entropy 
+優化器 = Adam  
 ### lstm(數據2)
-classes = 5, layers = 4, input_size = 36, hidden_size = 100
-learn rate = 0.001
-batch size = 4
-epochs = 50
-loss function = Cross Entropy
-優化器 = Adam
+classes = 5, layers = 4, input_size = 36, hidden_size = 100 
+learn rate = 0.001  
+batch size = 4  
+epochs = 50 
+loss function = Cross Entropy 
+優化器 = Adam  
 
 ---
 

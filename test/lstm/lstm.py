@@ -256,7 +256,7 @@ if __name__ == "__main__":
     print("time:",end - start)
     print("max_training_loss:",max(training_loss))
     print("max_training_accuracy:",max(training_accuracy))
-    print("max_validation_los:",max(validation_loss))
+    print("max_validation_loss:",max(validation_loss))
     print("max_tvalidation_accuracy:",max(validation_accuracy))
     print("min_training_loss:",min(training_loss))
     print("min_training_accuracy:",min(training_accuracy))

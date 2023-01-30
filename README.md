@@ -235,4 +235,4 @@ loss function = Cross Entropy
 | max validation accuracy | 95.8780 | 88.8706 | 96.4050 | 94.5455 |
 | min validation accuracy | 79.0190 | 25.8038 | 80.7438 | 51.7769 |
 
-可以觀察到兩者訓練結果的穩定度、accuracy、loss差不多，但因為ann的learn rate設定較高會導致overfitting，所以降低ann的learn rate並增加epochs，導致ann的epochs設定到500才收斂完成，lstm的epochs只需要設定50，所以以訓練效率來說lstm較為優良
+一開始使用ann來做姿勢辨識，如ann(data1)的參數和結果來看，雖然validation accuracy最大為95%，但是accuracy提升過快當訓練資料少容易造成overfitting，所以在ann(data2)將參數learn rate調整為0.00001，並將epochs改為500，將收斂的速度變慢，但由於訓練速度較慢所以實驗使用lstm的模型來做姿勢辨識，並且與ann不同的是lstm具有記憶，可將每一筆姿勢辨識串連起來，如lstm(data1)的參數和結果來看，validation accuracy到後面明顯已經低於training accuracy，模型預測結果不好，所以在lstm(data2)將layers調整為4，雖然增加計算量，但在accuracy和loss上獲得良好的數據

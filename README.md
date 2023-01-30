@@ -165,28 +165,28 @@ or:
 
     python lstm_predict_video.py video/output.mp4
 ## 模型參數:
-### ann(數據1)
+### ann(data1)
 輸入層 = 36, 隱藏層1 = 18, 隱藏層2 = 9, 輸出層 = 5  
 learn rate = 0.001  
 batch size = 4  
 epochs = 50   
 loss function = Cross Entropy   
 優化器 = Adam    
-### ann(數據2)
+### ann(data2)
 輸入層 = 36, 隱藏層1 = 18, 隱藏層2 = 9, 輸出層 = 5  
 learn rate = 0.00001  
 batch size = 4  
 epochs = 500  
 loss function = Cross Entropy   
 優化器 = Adam    
-### lstm(數據1)
+### lstm(data1)
 classes = 5, layers = 1, input_size = 36, hidden_size = 100   
 learn rate = 0.001   
 batch size = 4   
 epochs = 50   
 loss function = Cross Entropy   
 優化器 = Adam  
-### lstm(數據2)
+### lstm(data2)
 classes = 5, layers = 4, input_size = 36, hidden_size = 100   
 learn rate = 0.001  
 batch size = 4  
@@ -197,13 +197,13 @@ loss function = Cross Entropy
 ---
 
 ## LSTM與ANN觀察結果:
-### ann(數據1)
+### ann(data1)
 #### ann的loss:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/test/ann/ann_loss.jpg) 
 #### ann的accuracy:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/test/ann/ann_accuracy.jpg) 
   
-### ann(數據2)
+### ann(data2)
 #### ann的loss:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/ann/ann_loss.jpg)  
 #### ann的accuracy:  
@@ -211,21 +211,28 @@ loss function = Cross Entropy
 
 ---
 
-### lstm(數據1)
+### lstm(data1)
 #### lstm的loss:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/test/lstm/lstm_loss.jpg)  
 #### lstm的accuracy:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/test/lstm/lstm_accuracy.jpg)  
   
-### lstm(數據2)
+### lstm(data2)
 #### lstm的loss:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/lstm/lstm_loss.jpg)  
 #### lstm的accuracy:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/lstm/lstm_accuracy.jpg)  
 
-|  | ann(數據1) | ann(數據2) | lstm(數據1) | lstm(數據2) |
+|  | ann(data1) | ann(data2) | lstm(data1) | lstm(data2) |
 | :-----: | :----: | :----: | :----: | :----: |
-| 時間 | 02:37 | 22:55 | 06:13 | 10:58 |
-| max_training_loss | 1.5176 | 4.9203 | 0.8826 | 1.1118 |
+| run time | 02:37 | 22:55 | 06:13 | 10:58 |
+| max training loss | 1.5176 | 4.9203 | 0.8826 | 1.1118 |
+| min training loss | 0.0005 | 0.0016 | 0.0002 | 0.0013|
+| max training accuracy | 94.9505 | 88.3141 | 96.9278 | 94.9897 |
+| min training accuracy | 64.7259 | 15.3030 | 73.9278 | 40.8557 |
+| max validation loss | 3.0458 | 2.7060 | 0.7138 | 1.6506 |
+| min validation loss | 1.3292e-05 | 0.0005 | 0.0002 | 0.0009 |
+| max validation accuracy | 95.8780 | 88.8706 | 96.4050 | 94.5455 |
+| min validation accuracy | 79.0190 | 25.8038 | 80.7438 | 51.7769 |
 
 可以觀察到兩者訓練結果的穩定度、accuracy、loss差不多，但因為ann的learn rate設定較高會導致overfitting，所以降低ann的learn rate並增加epochs，導致ann的epochs設定到500才收斂完成，lstm的epochs只需要設定50，所以以訓練效率來說lstm較為優良

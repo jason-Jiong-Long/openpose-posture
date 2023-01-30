@@ -225,7 +225,7 @@ loss function = Cross Entropy
 
 |  | ann(data1) | ann(data2) | lstm(data1) | lstm(data2) |
 | :-----: | :----: | :----: | :----: | :----: |
-| run time | 02:37 | 22:55 | 06:13 | 10:58 |
+| runing time | 02:37 | 22:55 | 06:13 | 10:58 |
 | max training loss | 1.5176 | 4.9203 | 0.8826 | 1.1118 |
 | min training loss | 0.0005 | 0.0016 | 0.0002 | 0.0013|
 | max training accuracy | 94.9505 | 88.3141 | 96.9278 | 94.9897 |

@@ -23,7 +23,7 @@ Openpose辨識人體骨骼關節，獲得關節座標，並且將公車乘客分
     pip install -r requirements.txt
 
 ### 5.安裝ffmpeg:
-需下載[github上的ffmpeg](https://github.com/kkroening/ffmpeg-python/tree/master/examples)
+需下載[github上的ffmpeg](https://github.com/kkroening/ffmpeg-python/tree/master)
 在ffmpeg-python資料夾路徑底下執行:
 
     python setup.py build

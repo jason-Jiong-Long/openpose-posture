@@ -210,7 +210,7 @@ loss function = Cross Entropy
 
 ---
 
-## LSTM、rnn、ANN觀察結果:
+## LSTM、RNN、ANN觀察結果:
 ### ann(data1)
 #### ann的loss:  
 ![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/test/ann/ann_loss.jpg) 
@@ -227,15 +227,15 @@ loss function = Cross Entropy
 
 ### rnn(data1)
 #### rnn的loss:  
-![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/test/lstm/lstm_loss.jpg)  
+![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/test/rnn/rnn_loss.jpg)  
 #### rnn的accuracy:  
-![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/test/lstm/lstm_accuracy.jpg)  
+![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/test/rnn/rnn_accuracy.jpg)  
   
 ### rnn(data2)
 #### rnn的loss:  
-![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/lstm/lstm_loss.jpg)  
+![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/rnn/rnn_loss.jpg)  
 #### lrnn的accuracy:  
-![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/lstm/lstm_accuracy.jpg)  
+![圖片](https://github.com/jason-Jiong-Long/openpose-posture/blob/main/rnn/rnn_accuracy.jpg)  
 
 ---
 
@@ -253,14 +253,14 @@ loss function = Cross Entropy
 
 |  | ann(data1) | ann(data2) | lstm(data1) | lstm(data2) | rnn(data1) | rnn(data2) |
 | :-----: | :----: | :----: | :----: | :----: | :----: | :----: |
-| runing time | 02:37 | 22:55 | 06:13 | 10:58 | | |
-| max training loss | 1.5176 | 4.9203 | 0.8826 | 1.1118 | | |
-| min training loss | 0.0005 | 0.0016 | 0.0002 | 0.0013| | |
-| max training accuracy | 94.9505 | 88.3141 | 96.9278 | 94.9897 | | |
-| min training accuracy | 64.7259 | 15.3030 | 73.9278 | 40.8557 | | |
-| max validation loss | 3.0458 | 2.7060 | 0.7138 | 1.6506 | | |
-| min validation loss | 1.3292e-05 | 0.0005 | 0.0002 | 0.0009 | | |
-| max validation accuracy | 95.8780 | 88.8706 | 96.4050 | 94.5455 | | |
-| min validation accuracy | 79.0190 | 25.8038 | 80.7438 | 51.7769 | | |
+| runing time | 02:37 | 22:55 | 06:13 | 10:58 | 05:44 | 10:00 |
+| max training loss | 1.5176 | 4.9203 | 0.8826 | 1.1118 | 1.2139 | 2.9618 |
+| min training loss | 0.0005 | 0.0016 | 0.0002 | 0.0013| 0.0005| 0.0096 |
+| max training accuracy | 94.9505 | 88.3141 | 96.9278 | 94.9897 | 96.8763 | 86.1546 |
+| min training accuracy | 64.7259 | 15.3030 | 73.9278 | 40.8557 | 73.6186| 48.7113 |
+| max validation loss | 3.0458 | 2.7060 | 0.7138 | 1.6506 | 0.7839 | 2.1537 |
+| min validation loss | 1.3292e-05 | 0.0005 | 0.0002 | 0.0009 | 0.0002 | 0.0341 |
+| max validation accuracy | 95.8780 | 88.8706 | 96.4050 | 94.5455 | 96.8595 | 88.5124 |
+| min validation accuracy | 79.0190 | 25.8038 | 80.7438 | 51.7769 | 72.9339 | 58.3471 |
 
 一開始使用ann來做姿勢辨識，如ann(data1)的參數和結果來看，雖然validation accuracy最大為95%，但是accuracy提升過快當訓練資料少容易造成overfitting，所以在ann(data2)將參數learn rate調整為0.00001，並將epochs改為500，將收斂的速度變慢，但由於訓練速度較慢所以實驗使用lstm的模型來做姿勢辨識，並且與ann不同的是lstm具有記憶，可將每一筆姿勢辨識串連起來，如lstm(data1)的參數和結果來看，validation accuracy到後面明顯已經低於training accuracy，模型預測結果不好，所以在lstm(data2)將layers調整為4，雖然增加計算量，但在accuracy和loss上獲得良好的數據
